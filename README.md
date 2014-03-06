@@ -1,5 +1,5 @@
 # floqq-node
 
-Node.js lessons for Floqq
+Node.js course for Floqq
 
 
