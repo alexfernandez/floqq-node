@@ -1,8 +1,13 @@
+// modo estricto de JavaScript
+'use strict';
 var http = require('http');
 
 http.createServer(function (request, response) {
+	// request.url contiene el path de la petición
 	if (request.url != '/') {
+		// no es la home /, devuelve error
 		response.writeHead(500, {'Content-Type': 'text/plain'});
+		// una respuesta 500 puede devolver una página
 		response.end('Error');
 		return;
 	}
