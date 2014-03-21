@@ -9,7 +9,7 @@
 		"url": "https://github.com/alexfernandez/floqq-node"
 	},
 	"dependencies": {
-		"testing": "1.2.x"
+		"testing": "*"
 	},
 	"keywords" : ["Floqq", "node.js", "course", "education"],
 	"scripts": {
