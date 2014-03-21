@@ -6,19 +6,16 @@ var testing = require('testing');
 
 function start(port, callback) {
 	var server = net.createServer(function(connection) {
-		console.log('Connection open');
 		connection.write('Hello?\r\n');
 		connection.on('data', function(data) {
 			if (String(data).trim() != 'hello') {
 				connection.write('ERROR\r\n');
 			} else {
 				connection.end('world\r\n');
-				console.log('connection closed');
 			}
 		});
 	});
 	server.listen(port, callback);
-	console.log('Socket server listening on port %s', port);
 	return server;
 }
 
@@ -35,7 +32,6 @@ function Tester(port, callback) {
 	
 	function serverStarted(error) {
 		testing.check(error, 'Could not start server', callback);
-		console.log('started');
 		socket = net.connect(port, 'localhost', socketConnected);
 	}
 		
@@ -45,7 +41,6 @@ function Tester(port, callback) {
 	}
 	
 	function receiveData(data) {
-		console.log('Received ' + data);
 		var message = String(data).trim();
 		if (message == 'Hello?')
 		{
