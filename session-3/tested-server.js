@@ -5,8 +5,9 @@ var testing = require('testing');
 
 /**
  * Inicia un servidor "hello world".
+ * La función se exporta para la sesión 5.
  */
-function start(port, callback) {
+exports.start = function(port, callback) {
 	var server = net.createServer(function(connection) {
 		connection.write('Hello?\r\n');
 		connection.on('data', function(data) {
@@ -20,14 +21,14 @@ function start(port, callback) {
 	});
 	server.listen(port, callback);
 	return server;
-}
+};
 
 /**
  * Prueba el servidor
  */
 function testServer(callback) {
 	var port = 1705;
-	var server = start(port, function(error) {
+	var server = exports.start(port, function(error) {
 		testing.check(error, 'Could not start server', callback);
 		var socket = net.connect(port, 'localhost', function(error) {
 			testing.check(error, 'Could not connect', callback);
