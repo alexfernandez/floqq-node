@@ -48,9 +48,15 @@ function testServer(callback) {
 	});
 }
 
+/**
+ * Esta función se exporta para la sesión 5.
+ */
+exports.test = function(callback) {
+	testing.run([testServer], callback);
+};
+
 // run tests if invoked directly
-if (__filename == process.argv[1])
-{
-	testing.run([testServer], testing.show);
+if (__filename == process.argv[1]) {
+	exports.test(testing.show);
 }
 

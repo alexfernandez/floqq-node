@@ -26,7 +26,8 @@ function start(port, callback) {
  * Prueba el servidor.
  */
 function testServer(callback) {
-	var port = 1705;
+	// cambia el puerto de un test a otro
+	var port = 1706;
 	var server = start(port, function(error) {
 		testing.check(error, 'Could not start server', callback);
 		var socket = net.connect(port, 'localhost', function(error) {
@@ -52,7 +53,8 @@ function testServer(callback) {
  * Comprueba que el servidor devuelve ERROR si no recibe hello.
  */
 function testError(callback) {
-	var port = 1705;
+	// cambia el puerto de un test a otro
+	var port = 1707;
 	var server = start(port, function(error) {
 		testing.check(error, 'Could not start server', callback);
 		var socket = net.connect(port, 'localhost', function(error) {
@@ -79,10 +81,15 @@ function testError(callback) {
 	});
 }
 
+/**
+ * Esta función se exporta para la sesión 5.
+ */
+exports.test = function(callback) {
+	testing.run([testServer, testError], callback);
+};
+
 // run tests if invoked directly
-if (__filename == process.argv[1])
-{
-	// el nuevo test va aquí
-	testing.run([testServer, testError], testing.show);
+if (__filename == process.argv[1]) {
+	exports.test(testing.show);
 }
 
