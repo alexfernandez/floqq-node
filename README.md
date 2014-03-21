@@ -11,7 +11,8 @@ Por favor, intenta hacerlos primero antes de mirar las soluciones.
 
 ### Sesión 1: hola, mundo
 
-Código original: `hello-world.js`.
+Todo el código en `sesión-1`.
+Código original: `sesión-1/hello-world.js`.
 
 Ejercicios:
 * Cambiar la respuesta a "Hola, mundo" (en español).
@@ -20,7 +21,8 @@ Ejercicios:
 
 ### Sesión 2: hola, mundo (again)
 
-Código original: `hello-world.js`.
+Todo el código en `sesión-2`.
+Código original: `sesión-2/hello-world.js`.
 
 Ejercicios:
 * Admitir 'hello', 'Hello', 'HELLO, 'HeLlO'...
@@ -29,7 +31,8 @@ Ejercicios:
 
 ### Sesión 3: pruebas
 
-Código original: `tested-server.js`.
+Todo el código en `sesión-3`.
+Código original: `sesión-3/tested-server.js`.
 
 Ejercicios:
 * Eliminar todos los `console.log()`.
@@ -38,7 +41,8 @@ Ejercicios:
 
 ### Sesión 4: desmontando callbacks
 
-Código original: `server-tester.js`.
+Todo el código en `sesión-4`.
+Código original: `sesión-4/server-tester.js`.
 
 Ejercicios:
 * Convertir la función start() también a un objeto.
@@ -47,9 +51,12 @@ Ejercicios:
 
 ### Sesión 5: paquetes
 
+Todo el código en la raíz del paquete.
+Código original: `package.json`.
+
 Ejercicios (ligeramente cambiados desde la presentación):
-* Crear index.js que exporte alguna función.
-* Exportar todos los tests e importarlos desde test.js.
+* Crear un `index.js` que exporte alguna función.
+* Exportar todos los tests e importarlos desde `test.js`.
 * Publicar con `npm publish` y despublicar con `npm unpublish --force`.
   (Nota: primero es necesario hacer un fork.)
 
