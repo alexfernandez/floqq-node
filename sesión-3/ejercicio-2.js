@@ -4,7 +4,7 @@ var net = require('net');
 var testing = require('testing');
 
 /**
- * Start a hello world server.
+ * Inicia un servidor "hello world".
  */
 function start(port, callback) {
 	var server = net.createServer(function(connection) {
@@ -23,7 +23,7 @@ function start(port, callback) {
 }
 
 /**
- * Test the server.
+ * Prueba el servidor.
  */
 function testServer(callback) {
 	var port = 1705;
@@ -49,7 +49,7 @@ function testServer(callback) {
 }
 
 /**
- * Test that the server returns ERROR if not receiving hello.
+ * Comprueba que el servidor devuelve ERROR si no recibe hello.
  */
 function testError(callback) {
 	var port = 1705;
@@ -64,11 +64,11 @@ function testError(callback) {
 					socket.write('Not hello!');
 					return;
 				}
-				// must receive ERROR
+				// debe recibir ERROR
 				testing.assertEquals(message, 'ERROR', 'Invalid response', callback);
-				// but now we must close the socket
+				// ahora tenemos que cerrar el socket, no se cierra solo
 				socket.end(function() {
-					// and now the server as before
+					// y ahora el servidor como antes
 					server.close(function(error) {
 						testing.check(error, 'Could not stop server', callback);
 						testing.success(callback);
@@ -82,7 +82,7 @@ function testError(callback) {
 // run tests if invoked directly
 if (__filename == process.argv[1])
 {
-	// added the new test here
+	// el nuevo test va aquí
 	testing.run([testServer, testError], testing.show);
 }
 

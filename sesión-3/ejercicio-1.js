@@ -4,7 +4,7 @@ var net = require('net');
 var testing = require('testing');
 
 /**
- * Start a hello world server.
+ * Inicia un servidor "hello world".
  */
 function start(port, callback) {
 	var server = net.createServer(function(connection) {
@@ -23,7 +23,7 @@ function start(port, callback) {
 }
 
 /**
- * Test the server.
+ * Prueba el servidor.
  */
 function testServer(callback) {
 	var port = 1705;

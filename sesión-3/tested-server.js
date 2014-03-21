@@ -4,18 +4,16 @@ var net = require('net');
 var testing = require('testing');
 
 /**
- * Start a hello world server.
+ * Inicia un servidor "hello world".
  */
 function start(port, callback) {
 	var server = net.createServer(function(connection) {
-		console.log('Connection open');
 		connection.write('Hello?\r\n');
 		connection.on('data', function(data) {
 			if (String(data).trim() != 'hello') {
 				connection.write('ERROR\r\n');
 			} else {
 				connection.end('world\r\n');
-				console.log('connection closed');
 			}
 		});
 
@@ -25,17 +23,15 @@ function start(port, callback) {
 }
 
 /**
- * Test the server.
+ * Prueba el servidor
  */
 function testServer(callback) {
 	var port = 1705;
 	var server = start(port, function(error) {
 		testing.check(error, 'Could not start server', callback);
-		console.log('started');
 		var socket = net.connect(port, 'localhost', function(error) {
 			testing.check(error, 'Could not connect', callback);
 			socket.on('data', function(data) {
-				console.log('Received ' + data);
 				var message = String(data).trim();
 				if (message == 'Hello?')
 				{

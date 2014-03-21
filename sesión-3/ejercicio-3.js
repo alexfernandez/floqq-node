@@ -4,7 +4,7 @@ var net = require('net');
 var testing = require('testing');
 
 /**
- * Start a hello world server.
+ * Inicia un servidor "hello world".
  */
 function start(port, callback) {
 	var server = net.createServer(function(connection) {
@@ -23,7 +23,7 @@ function start(port, callback) {
 }
 
 /**
- * Test the server.
+ * Prueba el servidor.
  */
 function testServer(callback) {
 	var port = 1705;
@@ -49,7 +49,7 @@ function testServer(callback) {
 }
 
 /**
- * Test that the server returns ERROR if not receiving hello.
+ * Comprueba que el servidor devuelve ERROR si no recibe hello.
  */
 function testError(callback) {
 	var port = 1705;
@@ -64,11 +64,11 @@ function testError(callback) {
 					socket.write('Not hello!');
 					return;
 				}
-				// must receive ERROR
+				// debe recibir ERROR
 				testing.assertEquals(message, 'ERROR', 'Invalid response', callback);
-				// but now we must close the socket
+				// ahora tenemos que cerrar el socket, no se cierra solo
 				socket.end(function() {
-					// and now the server as before
+					// y ahora el servidor como antes
 					server.close(function(error) {
 						testing.check(error, 'Could not stop server', callback);
 						testing.success(callback);
@@ -80,22 +80,20 @@ function testError(callback) {
 }
 
 /**
- * Start one server, then another, then close both.
+ * Arranca un servidor, luego otro, y cierra ambos.
  */
 function testTwoServers(callback) {
-	var port1 = 1705;
-	var port2 = 1706;
-	// start first server
-	var server1 = start(port1, function(error) {
+	// arranca el primer servidor
+	var server1 = start(1705, function(error) {
 		testing.check(error, 'Could not start server 1', callback);
-		// start second server on a different port
-		var server2 = start(port2, function(error) {
-			// check for error too! use different messages for each error
+		// arranca el segundo servidor en otro puerto
+		var server2 = start(1706, function(error) {
+			// comprueba el error! usa diferentes mensajes para cada error
 			testing.check(error, 'Could not start server 2', callback);
-			// now close the first server
+			// ahora cierra el primer servidor
 			server1.close(function(error) {
 				testing.check(error, 'Could not stop server 1', callback);
-				// and the second server
+				// y el segundo
 				server2.close(function(error) {
 					testing.check(error, 'Could not stop server 2', callback);
 					testing.success(callback);
@@ -108,7 +106,7 @@ function testTwoServers(callback) {
 // run tests if invoked directly
 if (__filename == process.argv[1])
 {
-	// added the new test here, array in lines
+	// el nuevo test va aquí, ahora el array dividido en líneas
 	testing.run([
 		testServer,
 		testError,
