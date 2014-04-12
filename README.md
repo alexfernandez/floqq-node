@@ -5,14 +5,14 @@ Presentación disponible en [slid.es](http://slid.es/alexfernandez/node-js-floqq
 
 ## Código
 
-Este repositorio contiene el código visto en el curso.
+Este [repositorio](https://github.com/alexfernandez/floqq-node) contiene el código visto en el curso.
 También contiene las soluciones a los ejercicios.
 Por favor, intenta hacerlos primero antes de mirar las soluciones.
 
 ### Sesión 1: hola, mundo
 
-Todo el código en `sesión-1`.
-Código original: `sesión-1/hello-world.js`.
+Código original: [session-1/hello-world.js](https://github.com/alexfernandez/floqq-node/blob/master/session-1/hello-world.js).
+Todo el código en [session-1](https://github.com/alexfernandez/floqq-node/tree/master/session-1).
 
 Ejercicios:
 * Cambiar la respuesta a "Hola, mundo" (en español).
@@ -21,8 +21,8 @@ Ejercicios:
 
 ### Sesión 2: hola, mundo (again)
 
-Todo el código en `sesión-2`.
-Código original: `sesión-2/hello-world.js`.
+Código original: [session-2/hello-world.js](https://github.com/alexfernandez/floqq-node/blob/master/session-2/hello-world.js).
+Todo el código en [session-2](https://github.com/alexfernandez/floqq-node/tree/master/session-2).
 
 Ejercicios:
 * Admitir 'hello', 'Hello', 'HELLO, 'HeLlO'...
@@ -31,8 +31,8 @@ Ejercicios:
 
 ### Sesión 3: pruebas
 
-Todo el código en `sesión-3`.
-Código original: `sesión-3/tested-server.js`.
+Código original: [session-3/tested-server.js](https://github.com/alexfernandez/floqq-node/blob/master/session-3/tested-server.js).
+Todo el código en [session-3](https://github.com/alexfernandez/floqq-node/tree/master/session-3).
 
 Ejercicios:
 * Eliminar todos los `console.log()`.
@@ -41,8 +41,8 @@ Ejercicios:
 
 ### Sesión 4: desmontando callbacks
 
-Todo el código en `sesión-4`.
-Código original: `sesión-4/server-tester.js`.
+Código original: [session-4/server-tester.js](https://github.com/alexfernandez/floqq-node/blob/master/session-4/server-tester.js).
+Todo el código en [session-4](https://github.com/alexfernandez/floqq-node/tree/master/session-4).
 
 Ejercicios:
 * Convertir la función start() también a un objeto.
@@ -51,8 +51,8 @@ Ejercicios:
 
 ### Sesión 5: paquetes
 
-Todo el código en la raíz del paquete.
-Código original: `package.json`.
+Código original: [package.json](https://github.com/alexfernandez/floqq-node/blob/master/package.json).
+Todo el código en la [raíz](https://github.com/alexfernandez/floqq-node/tree/master) del paquete.
 
 Ejercicios (ligeramente cambiados desde la presentación):
 * Crear un `index.js` que exporte alguna función.
