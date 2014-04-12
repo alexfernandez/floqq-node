@@ -58,7 +58,7 @@ Ejercicios (ligeramente cambiados desde la presentación):
 * Crear un `index.js` que exporte alguna función.
 * Exportar todos los tests de la sesión 3 e importarlos desde `test.js`.
 * Publicar con `npm publish` y despublicar con `npm unpublish --force`.
-  (Nota: primero es necesario hacer un fork.)
+  (Nota: primero es necesario hacer un fork y cambiar el nombre al paquete.)
 
 ## Licencia
 
