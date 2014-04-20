@@ -47,7 +47,7 @@ Código original: `sesión-4/server-tester.js`.
 Ejercicios:
 * Convertir la función start() también a un objeto.
 * Convertir prueba a eventos.
-* Ver este vídeo (en inglés). Ejercicio sin código.
+* Ver [este vídeo](http://www.youtube.com/watch?v=qbKWsbJ76-s) (en inglés). Ejercicio sin código.
 
 ### Sesión 5: paquetes
 
